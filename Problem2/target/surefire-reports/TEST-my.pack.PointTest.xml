@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="my.pack.PointTest" time="6.667" tests="4" errors="2" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/eshqin/Desktop/Task-5/target/test-classes:/home/eshqin/Desktop/Task-5/target/classes:/home/eshqin/.m2/repository/org/graalvm/polyglot/polyglot/23.1.0/polyglot-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/sdk/collections/23.1.0/collections-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/sdk/nativeimage/23.1.0/nativeimage-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/sdk/word/23.1.0/word-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/python/python-language/23.1.0/python-language-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/truffle/truffle-api/23.1.0/truffle-api-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/tools/profiler-tool/23.1.0/profiler-tool-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/shadowed/json/23.1.0/json-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/regex/regex/23.1.0/regex-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/truffle/truffle-nfi/23.1.0/truffle-nfi-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/truffle/truffle-nfi-libffi/23.1.0/truffle-nfi-libffi-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/llvm/llvm-api/23.1.0/llvm-api-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/shadowed/icu4j/23.1.0/icu4j-23.1.0.jar:/home/eshqin/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar:/home/eshqin/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.76/bcpkix-jdk18on-1.76.jar:/home/eshqin/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.76/bcutil-jdk18on-1.76.jar:/home/eshqin/.m2/repository/org/tukaani/xz/1.9/xz-1.9.jar:/home/eshqin/.m2/repository/org/graalvm/python/python-resources/23.1.0/python-resources-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/truffle/truffle-runtime/23.1.0/truffle-runtime-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/python/python-language-enterprise/23.1.0/python-language-enterprise-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/truffle/truffle-enterprise/23.1.0/truffle-enterprise-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/truffle/truffle-compiler/23.1.0/truffle-compiler-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/sdk/jniutils/23.1.0/jniutils-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/sdk/nativebridge/23.1.0/nativebridge-23.1.0.jar:/home/eshqin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/eshqin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Baku"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/home/eshqin/Downloads/graalvm-jdk-21.0.1+12.1/lib"/>
+    <property name="sun.java.command" value="/home/eshqin/Desktop/Task-5/target/surefire/surefirebooter-20231022175528931_3.jar /home/eshqin/Desktop/Task-5/target/surefire 2023-10-22T17-55-28_825-jvmRun1 surefire-20231022175528931_1tmp surefire_0-20231022175528931_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/eshqin/Desktop/Task-5/target/test-classes:/home/eshqin/Desktop/Task-5/target/classes:/home/eshqin/.m2/repository/org/graalvm/polyglot/polyglot/23.1.0/polyglot-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/sdk/collections/23.1.0/collections-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/sdk/nativeimage/23.1.0/nativeimage-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/sdk/word/23.1.0/word-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/python/python-language/23.1.0/python-language-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/truffle/truffle-api/23.1.0/truffle-api-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/tools/profiler-tool/23.1.0/profiler-tool-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/shadowed/json/23.1.0/json-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/regex/regex/23.1.0/regex-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/truffle/truffle-nfi/23.1.0/truffle-nfi-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/truffle/truffle-nfi-libffi/23.1.0/truffle-nfi-libffi-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/llvm/llvm-api/23.1.0/llvm-api-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/shadowed/icu4j/23.1.0/icu4j-23.1.0.jar:/home/eshqin/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar:/home/eshqin/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.76/bcpkix-jdk18on-1.76.jar:/home/eshqin/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.76/bcutil-jdk18on-1.76.jar:/home/eshqin/.m2/repository/org/tukaani/xz/1.9/xz-1.9.jar:/home/eshqin/.m2/repository/org/graalvm/python/python-resources/23.1.0/python-resources-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/truffle/truffle-runtime/23.1.0/truffle-runtime-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/python/python-language-enterprise/23.1.0/python-language-enterprise-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/truffle/truffle-enterprise/23.1.0/truffle-enterprise-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/truffle/truffle-compiler/23.1.0/truffle-compiler-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/sdk/jniutils/23.1.0/jniutils-23.1.0.jar:/home/eshqin/.m2/repository/org/graalvm/sdk/nativebridge/23.1.0/nativebridge-23.1.0.jar:/home/eshqin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/eshqin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/eshqin"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-10-17"/>
+    <property name="java.home" value="/home/eshqin/Downloads/graalvm-jdk-21.0.1+12.1"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/eshqin/Desktop/Task-5"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="jdk.internal.vm.ci.enabled" value="true"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/home/eshqin/Desktop/Task-5/target/surefire/surefirebooter-20231022175528931_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.1+12-jvmci-23.1-b19"/>
+    <property name="user.name" value="eshqin"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.0-86-generic"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Oracle GraalVM 21.0.1+12.1"/>
+    <property name="localRepository" value="/home/eshqin/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="21.0.1"/>
+    <property name="user.dir" value="/home/eshqin/Desktop/Task-5"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.1+12-jvmci-23.1-b19"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testToString" classname="my.pack.PointTest" time="5.454">
+    <error message="Likely not integers!" type="java.lang.IllegalArgumentException"><![CDATA[java.lang.IllegalArgumentException: Likely not integers!
+	at my.pack.Point.<init>(Point.java:52)
+	at my.pack.PointTest.testToString(PointTest.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></error>
+  </testcase>
+  <testcase name="testDoublesWorking" classname="my.pack.PointTest" time="0.449">
+    <system-out><![CDATA[New x: 1
+New y: 1
+]]></system-out>
+  </testcase>
+  <testcase name="testIntegers" classname="my.pack.PointTest" time="0.3">
+    <error message="Likely not integers!" type="java.lang.IllegalArgumentException"><![CDATA[java.lang.IllegalArgumentException: Likely not integers!
+	at my.pack.Point.<init>(Point.java:52)
+	at my.pack.PointTest.testIntegers(PointTest.java:9)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></error>
+  </testcase>
+  <testcase name="testDoublesNotWorking" classname="my.pack.PointTest" time="0.382"/>
+</testsuite>
