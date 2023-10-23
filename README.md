@@ -61,7 +61,6 @@ Follow these steps to set up your environment for running the tasks:
 
    - If the build succeeds (you get the result above), you are ready to perform the tests using the provided task solutions.
 
-   ![Run the Tests](SCREENSHOTS/run_tests.png)
 
 Now, your environment is set up and ready to run the tasks. You can proceed to run and test the solutions.
 
