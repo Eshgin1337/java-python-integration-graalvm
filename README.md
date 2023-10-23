@@ -61,6 +61,7 @@ Follow these steps to set up your environment for running the tasks:
 
    - If the build succeeds (you get the result above), you are ready to perform the tests using the provided task solutions.
 
+   ![Run the Tests](SCREENSHOTS/run_tests.png)
 
 Now, your environment is set up and ready to run the tasks. You can proceed to run and test the solutions.
 
@@ -107,7 +108,7 @@ To complete Task 3, follow these steps:
 
 1. **Replace the Project's `src/` Folder:**
 
-    - Replace the `src/` folder inside your project directory with the `src/` folder from the `Problem3/Task-5` directory provided in this repository. This will replace the existing Java code with the translated Python code for `Segment.java`.
+    - Replace the `src/` folder inside your project directory with the `src/` folder from the `Problem3/Task-5` directory provided in this repository. This will replace the existing Java code with the translated Python code for `Point.java` and `Segment.java`.
 
 2. **Run the "public static void main":**
 
