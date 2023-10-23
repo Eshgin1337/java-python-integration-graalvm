@@ -94,9 +94,8 @@ To complete Task 2, follow these steps:
 
 2. **Run the "public static void main":**
 
-    - Running `Point.java` works the same as before; therefore, I just added the running result of `Segment.java`:
-    <br>
-    **Run main method:** <br>
+    - Running `Point.java` works the same as before; therefore, I just added the running result of `Segment.java`: <br>
+    **Run main method:**
     ![Run main method](SCREENSHOTS/segment_running_main_method.png) <br>
     **Result:** <br>
     ![Result:](SCREENSHOTS/segment_run_main_result.png)
@@ -113,9 +112,8 @@ To complete Task 3, follow these steps:
 2. **Run the "public static void main":**
 
     - Because `Point.java` remains as it is in original. I just test `Segment.java`. `Point.java` in this regard can be tested with unit testing.
-    1. Point.java
-    <br>
-    **Run main method:** <br>
+    Segment.java <br>
+    **Run main method:** 
     ![Run main method](SCREENSHOTS/semment_task3_main.png) <br>
     **Result:** <br>
     ![Result:](SCREENSHOTS/segment_task3_run_result.png)
