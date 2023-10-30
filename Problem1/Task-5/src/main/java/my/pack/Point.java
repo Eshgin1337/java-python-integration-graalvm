@@ -2,72 +2,84 @@ package my.pack;
 
 import org.graalvm.polyglot.*;
 
-import java.io.IOException;
-import java.nio.file.Files;
+import java.io.*;
+import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Set;
 
 public class Point {
-    int x;
-    int y;
+    private int x;
+    private int y;
+    private String string;
 
-    String string = new String("");
-    static final double EPS = 0.0001;
+    private Context context;
 
     public Point(int x, int y) {
+        initializeContext();
         this.x = x;
         this.y = y;
+        initializePythonPoint(x,y,false);
     }
+
     public Point(double r, double a, boolean polar) {
-        try (Context context = Context.newBuilder().allowAllAccess(true).build()) {
-            // Load the Python script from the Python file
-            Source source = Source.newBuilder("python", Paths.get("src/main/resources/Point.py").toFile()).build();
-            context.eval(source);
+        initializeContext();
+        initializePythonPoint(r, a, polar);
+    }
 
-            // Access the Point class defined in Python
-            Value pointClass = context.getBindings("python").getMember("Point");
-
-            try {
-                String polOrNot = "";
-                if (polar)
-                {
-                    polOrNot = "True";
-                } else {
-                    polOrNot = "False";
-                }
-                Value pointInstance = pointClass.newInstance(r, a, polOrNot);
-                // Call methods on the Python Point instance
-                int newX = pointInstance.getMember("getX").execute().asInt();
-                int newY = pointInstance.getMember("getY").execute().asInt();
-                String toStringResult = pointInstance.getMember("toString").execute().asString();
-                System.out.print("New x: ");
-                System.out.println(newX);
-                System.out.print("New y: ");
-                System.out.println(newY);
-                // Update the x and y values from Python
-                this.x = newX;
-                this.y = newY;
-                this.string = toStringResult;
-            } catch (PolyglotException e) {
-                throw new IllegalArgumentException("Likely not integers!");
-            }
+    private void initializeContext() {
+        try {
+            context = Context.create();
+            context.eval(Source.newBuilder("python", Paths.get("src/main/resources/Point.py").toFile()).build());
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new IllegalArgumentException("An error occurred while initializing the Python script.");
         }
     }
+
+
+    private void initializePythonPoint(double r, double a, boolean polar) {
+        try {
+            String polarStr = polar ? "True" : "False";
+            String script = String.format("point = Point(%f, %f, %s)\n", r, a, polarStr);
+            script += "x = point.getX()\n";
+            script += "y = point.getY()\n";
+            script += "s = point.toString()\n";
+
+            context.eval("python", script);
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Likely not integers!");
+        }
+    }
+
+
     public int getX() {
-        return x;
+        try {
+            x = context.eval("python", "x").asInt();
+            return x;
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new IllegalArgumentException("An error occurred while getting X from Python.");
+        }
     }
 
     public int getY() {
-        return y;
+        try {
+            y = context.eval("python", "y").asInt();
+            return y;
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new IllegalArgumentException("An error occurred while getting Y from Python.");
+        }
     }
 
     public String toString() {
-        return "(" + x + ", " + y + ")";
+        try {
+            string = context.eval("python", "s").asString();
+            return string;
+        } catch (Exception e) {
+            throw new IllegalArgumentException("An error occurred while getting the string representation from Python.");
+        }
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         System.out.println("Testing 'testIntegers()' method of 'PointTest' class:");
         Point p1 = new Point(1, 2);
         System.out.println("Expected: 1 -- Result: " + p1.getX());
@@ -91,8 +103,6 @@ public class Point {
         System.out.println("Testing 'testDoublesNotWorking()' method of 'PointTest' class (Error expected):");
         Point p4 = new Point(Math.sqrt(2), Math.PI / 2, true);
 
-
         System.out.println("\n---------------------------------------\n");
     }
 }
-
