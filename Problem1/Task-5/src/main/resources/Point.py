@@ -4,16 +4,22 @@ class Point:
     EPS = 0.0001
 
     def __init__(self, r, a, polar=False):
-        if(polar == "False"):
+        x = 0
+        y = 0
+        if(polar == "False" or polar==False):
             polar = False
         else:
             polar = True
-        x = r * math.cos(a) if polar else r
-        y = r * math.sin(a) if polar else a
+        if polar:
+            x = r * math.cos(a)
+            y = r * math.sin(a)
+        else:
+            x = r
+            y = a
         self.x = int(x)
         self.y = int(y)
         if abs(self.x - x) >= Point.EPS or abs(self.y - y) >= Point.EPS:
-            raise ValueError("Likely not integers!")
+            raise ValueError(x, y)
 
     def getX(self):
         return self.x
@@ -23,4 +29,3 @@ class Point:
 
     def toString(self):
         return f"({self.x}, {self.y})"
-
