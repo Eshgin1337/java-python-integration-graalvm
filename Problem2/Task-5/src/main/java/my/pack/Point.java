@@ -12,6 +12,7 @@ public class Point {
     private String string;
 
     private Context context;
+    static final double EPS = 0.0001;
 
     public Point(int x, int y) {
         initializeContext();
