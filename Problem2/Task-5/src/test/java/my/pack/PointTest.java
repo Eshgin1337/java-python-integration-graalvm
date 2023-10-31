@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 public class PointTest {
     @Test
     public void testIntegers() {
-        Point p = new Point(1, 2, false);
+        Point p = new Point(1, 2);
         assertEquals(1, p.getX());
         assertEquals(2, p.getY());
     }
@@ -25,7 +25,7 @@ public class PointTest {
 
     @Test
     public void testToString() {
-        Point p = new Point(1, 2, false);
+        Point p = new Point(1, 2);
         assertEquals("(1, 2)", p.toString());
     }
 }
