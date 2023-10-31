@@ -15,8 +15,6 @@ public class Point {
 
     public Point(int x, int y) {
         initializeContext();
-        this.x = x;
-        this.y = y;
         initializePythonPoint(x,y,false);
     }
 
