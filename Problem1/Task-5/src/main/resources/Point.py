@@ -1,15 +1,15 @@
 import math
 
 class Point:
-    EPS = 0.0001
-
-    def __init__(self, r, a, polar=False):
+    def __init__(self, EPS, r, a, polar=False):
+        self.EPS = EPS
         x = 0
         y = 0
         if(polar == "False" or polar==False):
             polar = False
         else:
             polar = True
+
         if polar:
             x = r * math.cos(a)
             y = r * math.sin(a)
@@ -18,7 +18,7 @@ class Point:
             y = a
         self.x = int(x)
         self.y = int(y)
-        if abs(self.x - x) >= Point.EPS or abs(self.y - y) >= Point.EPS:
+        if abs(self.x - x) >= self.EPS or abs(self.y - y) >= self.EPS:
             raise ValueError(x, y)
 
     def getX(self):

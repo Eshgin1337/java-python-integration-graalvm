@@ -6,22 +6,24 @@ import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+
 public class Point {
     private int x;
     private int y;
     private String string;
 
-    private Context context;
     static final double EPS = 0.0001;
+
+    private Context context;
 
     public Point(int x, int y) {
         initializeContext();
-        initializePythonPoint(x,y,false);
+        initializePythonPoint(EPS, x, y,false);
     }
 
     public Point(double r, double a, boolean polar) {
         initializeContext();
-        initializePythonPoint(r, a, polar);
+        initializePythonPoint(EPS, r, a, polar);
     }
 
     private void initializeContext() {
@@ -34,16 +36,17 @@ public class Point {
     }
 
 
-    private void initializePythonPoint(double r, double a, boolean polar) {
+    private void initializePythonPoint(double eps, double r, double a, boolean polar) {
         try {
             String polarStr = polar ? "True" : "False";
-            String script = String.format("point = Point(%f, %f, %s)\n", r, a, polarStr);
+            String script = String.format("point = Point(%f, %f, %f, %s)\n", eps, r, a, polarStr);
             script += "x = point.getX()\n";
             script += "y = point.getY()\n";
             script += "s = point.toString()\n";
 
             context.eval("python", script);
         } catch (Exception e) {
+//            e.printStackTrace();
             throw new IllegalArgumentException("Likely not integers!");
         }
     }
